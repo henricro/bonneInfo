@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <script src="https://d3js.org/d3.v6.js"></script>
+        <link rel="stylesheet" type="text/css" href="carteFrance.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/topojson-client@3"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+
+    </head>
+    <body>
+        <svg id="canvasCarte" viewBox="0 0 1280 1000" style="background-color:white">
+            <foreignobject class="node" x="900" y="30" width="300" height="100%">
+                
+                <div id="rectDept">
+                    <div id="nomDept"></div>
+                    <div id="probRE">
+                        <div id="pie">uyg</div>
+                        <div id="probNum">35%</div>
+                        <div id="probTitle">Probabilité de retour à l'emploi</div>
+                    </div>
+                    <div id="salaire">
+                        <div id="salVal"></div>
+                        <div id="salTitle">Salaire moyen</div>
+                    </div>
+                    <div id="tension">
+                        <div id="tensVal">3/6</div>
+                        <div id="tensTitle">Niveau de tension</div>
+                    </div>
+                </div>   
+
+            </foreignobject>
+        </svg>
+          
+    </body>
+    <script type="text/javascript" src="carteJson.js" ></script>
+    <script type="text/javascript" src="carteFrance.js" ></script>
+
+</html>

@@ -1,0 +1,23 @@
+#b1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#b2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#bonhommes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#legendBonhommes {
+    margin-left: 50px;
+}

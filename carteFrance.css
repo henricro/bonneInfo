@@ -1,0 +1,78 @@
+#rectDept {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 2px;;
+}
+
+#nomDept {
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#probRE {
+    border-bottom: 1px dashed black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+}
+
+#probTitle {
+    justify-content: left;
+    width: 50%;
+}
+
+#probNum {
+    font-size: 25px;
+    width: 20%;
+    font-weight: bold;
+}
+
+#pie {
+    width: 30%;
+}
+
+#salTitle {
+    width: 50%;
+}
+
+#salVal {
+    font-size: 25px;
+    font-weight: bolder;
+    width: 50%;
+    text-align: center;
+}
+
+#salaire {
+    border-bottom: 1px dashed black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+}
+#tensTitle {
+    justify-content: center;
+    width: 50%;
+}
+
+#tensVal {
+    font-size: 25px;
+    font-weight: bolder;
+    width: 50%;
+    text-align: center;
+}
+
+#tension {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+}
+
