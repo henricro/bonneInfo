@@ -1,6 +1,6 @@
 var rawbase = 'https://raw.githubusercontent.com/';
 
-var jsonloc = 'cerezamo/LaBonneInfo/main/output/IndicateurSalairesJSON.json';
+var jsonloc = 'henricro/bonneInfo/main/simulDataBonneInfo.json';
 
 var width = 1280;
 
@@ -20,7 +20,14 @@ var projection = d3
     .scale(5000)
     .translate([width / 2 - 10, height / 2 + 50])
 
-var color = d3.scaleThreshold([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ], d3.schemeRdYlGn[9]);
+var color = d3.scaleThreshold([10, 20, 30, 40, 50, 60, 70, 80 ], d3.schemeRdYlGn[9]);
+
+var myColor = d3.scaleLinear().domain([1,100])
+  .range(["white", "blue"]);
+
+/*function color (proba) {
+    if (proba > 50) {return "blue"} else { return "orange"}
+}*/
 
 var path = d3.geoPath(projection); 
 
@@ -40,7 +47,12 @@ $.getJSON(rawbase + jsonloc, function( data ) {
         .attr("cursor", "pointer")
         .attr("stroke", "white")
         .attr("stroke-width", 0.5)
-        .attr("fill","blue")
+        .attr("fill",d => { 
+            var dep = d.properties.DEP ;
+            var proba =  data.filter(element => element.ROME ==indRome).filter( element => element.DEP ==dep)[0].PROBA;
+            console.log(proba);
+            return color(proba);
+        })
         .attr("d", path);   
 
     var rect = svg.append("g");
@@ -77,30 +89,38 @@ $.getJSON(rawbase + jsonloc, function( data ) {
 
             var dep = d.properties.DEP;
 
-            var salMoy =  data.filter(element => element.ROME ==indRome).filter( element => element.DEP ==dep)[0].SALAIRE_MOYEN;
+            var salMoy =  data.filter(element => element.ROME ==indRome).filter( element => element.DEP ==dep)[0].SALAIRE_MOYEN_A;
                 
+            var Tensions =  data.filter(element => element.ROME ==indRome).filter( element => element.DEP ==dep)[0].TENSIONS;
+
+            var proba =  data.filter(element => element.ROME ==indRome).filter( element => element.DEP ==dep)[0].PROBA;
+
             $("#nomDept").html(d.properties.Nom);
             
             $("#salVal").html(salMoy + " €");
 
-            var dataa = [perc, 100 - perc];
+            $("#tensVal").html(Tensions);
+
+            $("#probNum").html(proba + " %");
+
+            var dataa = [proba, 100 - proba];
             var arcs = d3.pie()(dataa);
-            var pie = rect.append("g")
-            .selectAll("path")
-            .data(arcs)
-            .join("path")
-            .attr("id", "pie")
-            .attr("d", arc)
-            .attr("transform", "translate(1020, 80)")
-            .attr("fill", function(d){
-                    if (perc<50){
-                    if (d.index==1) {return color(d.data/100)} 
-                    else {return "white"}}
-                    else {  
-                    if (d.index==0) {return color(d.data/100)} 
-                    else {return "white"}
-                    }  
-            });
+            var pie = svg.append("g")
+                .selectAll("path")
+                .data(arcs)
+                .join("path")
+                .attr("id", "pie")
+                .attr("d", arc)
+                .attr("transform", "translate(950, 115)")
+                .attr("fill", function(d){
+                        if (proba<50){
+                        if (d.index==1) {return color(d.data)} 
+                        else {return "white"}}
+                        else {  
+                        if (d.index==0) {return color(d.data)} 
+                        else {return "white"}
+                        }  
+                });
             
                     
         });
