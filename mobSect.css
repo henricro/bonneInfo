@@ -1,0 +1,82 @@
+#cont0 {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+#cont1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height : 200px;
+}
+
+#cont2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height : 200px;
+}
+
+.box {
+    border : 1px black solid;
+    border-radius: 3px;
+    margin:2px;
+    width: 33%;
+    background-color: rgb(173, 170, 170, 0.1)
+}
+
+.sectName {
+    text-align: center;
+    height: 25%;
+    padding-top: 5px;
+    border-bottom : 1px dashed grey;
+    background-color : rgb(229, 71, 75, 0.1);
+}
+
+.sal, .proba, .tension {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sal {
+    height: 18%;
+}
+
+.proba {
+    height: 35%;
+}
+
+.tension {
+    height: 22%;
+}
+
+.Val {
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    padding-top: auto; padding-left: auto;
+}
+
+
+.Title {
+    height: 100%;
+    width: 50%;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.proba .Val {
+    margin-top: 15px;
+}
+
+.tension .Val {
+    margin-top: 8px;
+}
+
+.sal .Title, .sal .Val {
+    margin-top: 4px;
+}
+
+
