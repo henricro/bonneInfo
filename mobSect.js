@@ -31,12 +31,12 @@ var s5nom = data.filter(element => element.ROME==s5).filter(element => element.D
 var s6nom = data.filter(element => element.ROME==s6).filter(element => element.DEP ==dep)[0].NOM;
 */
 
-$("#s1").find(".sectName").html(s1);
-$("#s2").find(".sectName").html(s2);
-$("#s3").find(".sectName").html(s3);
-$("#s4").find(".sectName").html(s4);
-$("#s5").find(".sectName").html(s5);
-$("#s6").find(".sectName").html(s6);
+$("#s1").find(".sectName").html(s1 + " - " + s1);
+$("#s2").find(".sectName").html(s2 + " - " + s2);
+$("#s3").find(".sectName").html(s3 + " - " + s3);
+$("#s4").find(".sectName").html(s4 + " - " + s4);
+$("#s5").find(".sectName").html(s5 + " - " + s5);
+$("#s6").find(".sectName").html(s6 + " - " + s6);
 
 
 // SALAIRE
@@ -48,12 +48,12 @@ $("#s6").find(".sectName").html(s6);
     var s5sal = data.filter(element => element.ROME==s5).filter(element => element.DEP ==dep)[0].SALAIRE_MOYEN_A;
     var s6sal = data.filter(element => element.ROME==s6).filter(element => element.DEP ==dep)[0].SALAIRE_MOYEN_A;
     
-    $("#s1").find(".sal").find(".Val").html(s1sal + " €");
-    $("#s2").find(".sal").find(".Val").html(s2sal + " €");
-    $("#s3").find(".sal").find(".Val").html(s3sal + " €");
-    $("#s4").find(".sal").find(".Val").html(s4sal + " €");
-    $("#s5").find(".sal").find(".Val").html(s5sal + " €");
-    $("#s6").find(".sal").find(".Val").html(s6sal + " €");
+    $("#s1").find(".values").find(".sal").find(".val").html(s1sal + " €/an");
+    $("#s2").find(".values").find(".sal").find(".val").html(s2sal + " €/an");
+    $("#s3").find(".values").find(".sal").find(".val").html(s3sal + " €/an");
+    $("#s4").find(".values").find(".sal").find(".val").html(s4sal + " €/an");
+    $("#s5").find(".values").find(".sal").find(".val").html(s5sal + " €/an");
+    $("#s6").find(".values").find(".sal").find(".val").html(s6sal + " €/an");
 
 // TENSIONS
 
@@ -64,12 +64,12 @@ $("#s6").find(".sectName").html(s6);
     var s5tens = data.filter(element => element.ROME==s5).filter(element => element.DEP ==dep)[0].TENSIONS;
     var s6tens = data.filter(element => element.ROME==s6).filter(element => element.DEP ==dep)[0].TENSIONS;
     
-    $("#s1").find(".tension").find(".Val").html(s1tens);
-    $("#s2").find(".tension").find(".Val").html(s2tens);
-    $("#s3").find(".tension").find(".Val").html(s3tens);
-    $("#s4").find(".tension").find(".Val").html(s4tens);
-    $("#s5").find(".tension").find(".Val").html(s5tens);
-    $("#s6").find(".tension").find(".Val").html(s6tens);
+    $("#s1").find(".values").find(".tension").find(".val").html(s1tens);
+    $("#s2").find(".values").find(".tension").find(".val").html(s2tens);
+    $("#s3").find(".values").find(".tension").find(".val").html(s3tens);
+    $("#s4").find(".values").find(".tension").find(".val").html(s4tens);
+    $("#s5").find(".values").find(".tension").find(".val").html(s5tens);
+    $("#s6").find(".values").find(".tension").find(".val").html(s6tens);
     
 // PROBA
 
@@ -80,23 +80,17 @@ $("#s6").find(".sectName").html(s6);
     var s5proba = data.filter(element => element.ROME==s5).filter(element => element.DEP ==dep)[0].PROBA;
     var s6proba = data.filter(element => element.ROME==s6).filter(element => element.DEP ==dep)[0].PROBA;
     
-    $("#s1").find(".proba").find(".Val").html(s1proba);
-    $("#s2").find(".proba").find(".Val").html(s2proba);
-    $("#s3").find(".proba").find(".Val").html(s3proba);
-    $("#s4").find(".proba").find(".Val").html(s4proba);
-    $("#s5").find(".proba").find(".Val").html(s5proba);
-    $("#s6").find(".proba").find(".Val").html(s6proba);
+    $("#s1").find(".values").find(".proba").find(".val").html(s1proba + " %");
+    $("#s2").find(".values").find(".proba").find(".val").html(s2proba + " %");
+    $("#s3").find(".values").find(".proba").find(".val").html(s3proba + " %");
+    $("#s4").find(".values").find(".proba").find(".val").html(s4proba + " %");
+    $("#s5").find(".values").find(".proba").find(".val").html(s5proba + " %");
+    $("#s6").find(".values").find(".proba").find(".val").html(s6proba + " %");
 
 });    
 
 
-$(".sal").find(".Title").html("Salaire Moyen");
-$(".tension").find(".Title").html("Niveau de tensions");
-$(".proba").find(".Title").html("Probabilité de retour à l'emploi");
 
 /////////////
 
-var cont0=d3.select("#cont0");
 
-cont0
-    .selectAll(".box")
