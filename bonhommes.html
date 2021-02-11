@@ -3,208 +3,23 @@
     <head>
         <script src="https://d3js.org/d3.v4.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="mobSect.css">
+        <link rel="stylesheet" type="text/css" href="bonhommes.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     </head>
     <body>
-           
-            <div id="s1" class="box">
-                <div class = "sect">
-                    <img class="medal" src="icons/medal.png"/>
-                    <div class="sectName"></div>
-                </div>
-                <div class="details"></div>
-                <div class="infos">Infos Générales</div>
-                <div class="values">
-                    <div class = "sal">
-                        <div class = "title">
-                            <img class="icon" src="icons/hand.png"/>
-                            <div class="titleName">Salaire Moyen</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "proba">
-                        <div class = "title">
-                            <img class="icon" src="icons/choice.png"/>
-                            <div class="titleName">Chances</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "tension">
-                        <div class = "title">
-                            <img class="icon" src="icons/equality.png"/>
-                            <div class="titleName">Tension</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>  
-                </div> 
+            <div id="b1">
+                <div style="width:15%; color:#e5474b; font-size: 30px; text-align: center;" id="probaVal" >22%</div>
+                <div style="width:85%;" id="canvasBonhommes" ></div>
             </div>
-
-            <div id="s2" class="box">
-                <div class = "sect">
-                    <img class="medal" src="icons/medal1.png"/>
-                    <div class="sectName"></div>
-                </div>
-                <div class="details"></div>
-                <div class="infos">Infos Générales</div>
-                <div class="values">
-                    <div class = "sal">
-                        <div class = "title">
-                            <img class="icon" src="icons/hand.png"/>
-                            <div class="titleName">Salaire Moyen</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "proba">
-                        <div class = "title">
-                            <img class="icon" src="icons/choice.png"/>
-                            <div class="titleName">Chances</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "tension">
-                        <div class = "title">
-                            <img class="icon" src="icons/equality.png"/>
-                            <div class="titleName">Tension</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>  
-                </div> 
-            </div>
-
-            <div id="s3" class="box">
-                <div class = "sect">
-                    <img class="medal" src="icons/medal2.png"/>
-                    <div class="sectName"></div>
-                </div>
-                <div class="details"></div>
-                <div class="infos">Infos Générales</div>
-                <div class="values">
-                    <div class = "sal">
-                        <div class = "title">
-                            <img class="icon" src="icons/hand.png"/>
-                            <div class="titleName">Salaire Moyen</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "proba">
-                        <div class = "title">
-                            <img class="icon" src="icons/choice.png"/>
-                            <div class="titleName">Chances</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "tension">
-                        <div class = "title">
-                            <img class="icon" src="icons/equality.png"/>
-                            <div class="titleName">Tension</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>  
-                </div> 
-            </div>
-<!--
-            <div id="s4" class="box">
-                <div class = "sect">
-                    <img class="medal" src="icons/medal.png"/>
-                    <div class="sectName"></div>
-                </div>
-                <div class="details"></div>
-                <div class="infos">Infos Générales</div>
-                <div class="values">
-                    <div class = "sal">
-                        <div class = "title">
-                            <img class="icon" src="icons/hand.png"/>
-                            <div class="titleName">Salaire Moyen</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "proba">
-                        <div class = "title">
-                            <img class="icon" src="icons/choice.png"/>
-                            <div class="titleName">Chances</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "tension">
-                        <div class = "title">
-                            <img class="icon" src="icons/equality.png"/>
-                            <div class="titleName">Tension</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>  
-                </div> 
-            </div>
-
-            <div id="s5" class="box">
-                <div class = "sect">
-                    <img class="medal" src="icons/medal.png"/>
-                    <div class="sectName"></div>
-                </div>
-                <div class="details"></div>
-                <div class="infos">Infos Générales</div>
-                <div class="values">
-                    <div class = "sal">
-                        <div class = "title">
-                            <img class="icon" src="icons/hand.png"/>
-                            <div class="titleName">Salaire Moyen</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "proba">
-                        <div class = "title">
-                            <img class="icon" src="icons/choice.png"/>
-                            <div class="titleName">Chances</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "tension">
-                        <div class = "title">
-                            <img class="icon" src="icons/equality.png"/>
-                            <div class="titleName">Tension</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>  
-                </div> 
-            </div>
-
-            <div id="s6" class="box">
-                <div class = "sect">
-                    <img class="medal" src="icons/medal.png"/>
-                    <div class="sectName"></div>
-                </div>
-                <div class="details"></div>
-                <div class="infos">Infos Générales</div>
-                <div class="values">
-                    <div class = "sal">
-                        <div class = "title">
-                            <img class="icon" src="icons/hand.png"/>
-                            <div class="titleName">Salaire Moyen</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "proba">
-                        <div class = "title">
-                            <img class="icon" src="icons/choice.png"/>
-                            <div class="titleName">Chances</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>
-                    <div class = "tension">
-                        <div class = "title">
-                            <img class="icon" src="icons/equality.png"/>
-                            <div class="titleName">Tension</div>
-                        </div>
-                        <div class = "val"></div>
-                    </div>  
-                </div> 
-            </div>
--->         
+            <div id="b2">
+                <div style="width:15%; color:#4682B4; font-size: 30px; text-align: center;" id="probaVal2" >34%</div>
+                <div style="width:85%;" id="canvasBonhommes2" ></div>  
+            </div>        
+            <div style="margin-top: 5px;" id="legendBonhommes" ></div>
     </body>
 
-    <script type="text/javascript" src="mobSect.js" ></script>
+    <script type="text/javascript" src="bonhommes.js" ></script>
 
 </html>
-
