@@ -1,82 +1,77 @@
-#cont0 {
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-}
-
-#cont1 {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height : 200px;
-}
-
-#cont2 {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height : 200px;
+html {
+    font-family: Arial;
+    color: rgb(80, 80, 80);
 }
 
 .box {
-    border : 1px black solid;
-    border-radius: 3px;
-    margin:2px;
-    width: 33%;
-    background-color: rgb(173, 170, 170, 0.1)
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.sect {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.medal {
+    height: 70%;
 }
 
 .sectName {
-    text-align: center;
-    height: 25%;
-    padding-top: 5px;
-    border-bottom : 1px dashed grey;
-    background-color : rgb(229, 71, 75, 0.25);
+    width: 85%;
+    padding-left: 5%;
+}
+
+.infos {
+    margin-top: 30px;
+    text-align : left;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.values {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
 }
 
 .sal, .proba, .tension {
-    width: 100%;
+    width: 33%;
+    height: 100%;
+}
+
+.sal, .proba {
+    border-right: 1px solid rgb(173, 173, 173);
+}
+
+.title {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 100%;
 }
 
-.sal {
-    height: 18%;
+.icon {
+    width: 20%;
 }
 
-.proba {
-    height: 35%;
-}
-
-.tension {
-    height: 22%;
-}
-
-.Val {
-    height: 100%;
-    width: 50%;
-    text-align: center;
-    padding-top: auto; padding-left: auto;
-}
-
-
-.Title {
-    height: 100%;
-    width: 50%;
+.titleName {
+    width: 60%;
+    padding-left: 5%;
     text-align: left;
-    padding-left: 5px;
 }
 
-.proba .Val {
-    margin-top: 15px;
-}
-
-.tension .Val {
-    margin-top: 8px;
-}
-
-.sal .Title, .sal .Val {
-    margin-top: 4px;
+.val {
+    text-align: center;
+    width: 100%;
 }
 
 
